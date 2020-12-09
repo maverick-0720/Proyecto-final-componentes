@@ -50,7 +50,7 @@ function traerTablas() {
 function agregar() {
     let idTabla = this.id;
     sessionStorage.setItem('idTabla',idTabla);
-    console.log(sessionStorage.getItem('idTabla'));
+    window.location.href = 'agregarTarea.html';
 }
 
 
