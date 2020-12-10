@@ -32,17 +32,13 @@ function traerTablas() {
                 botonVisualizar.id = data.body.TableNames[i];
                 botonVisualizar.innerText = "Ver To-Do";
                 celdaVisualizacion.appendChild(botonVisualizar);
-                botonVisualizar.addEventListener('click',agregar);
+                botonVisualizar.addEventListener('click',verToDos);
 
                 let botonBorrar = document.createElement('button');
                 botonBorrar.id = data.body.TableNames[i];
                 botonBorrar.innerText = "Eliminar colección";
                 celdaEliminar.appendChild(botonBorrar);
-                botonBorrar.addEventListener('click',agregar);
-
-                // valor[i] = data.body.TableNames[i];
-                // var linea = "<tr><td id='columnas'>" + "<h2>" +data.body.TableNames[i] + "</h2>" + "</td><td id='columnas'>" +"<h2><button onclick='agregar()' id='3'>"+ "agregar tarea" + "</button>" + "</td></tr>";
-                // document.getElementById("coleccion").insertAdjacentHTML("beforeend", linea);
+                botonBorrar.addEventListener('click',eliminarColec);
             }
         });
 }
@@ -51,6 +47,16 @@ function agregar() {
     let idTabla = this.id;
     sessionStorage.setItem('idTabla',idTabla);
     window.location.href = 'agregarTarea.html';
+}
+
+function verToDos() {
+    let idTabla = this.id;
+    sessionStorage.setItem('idTabla',idTabla);
+    window.location.href = 'agregarTarea.html';
+}
+
+function eliminarColec() {
+
 }
 
 
