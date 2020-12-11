@@ -52,10 +52,25 @@ function agregar() {
 function verToDos() {
     let idTabla = this.id;
     sessionStorage.setItem('idTabla',idTabla);
-    window.location.href = 'agregarTarea.html';
+    window.location.href = 'verToDo.html';
 }
 
 function eliminarColec() {
+    let idTabla = this.id;
+    sessionStorage.setItem('idTabla',idTabla);
+
+    var params = {
+        name: idTabla
+    }
+
+    if (confirm("Estás seguro de querer eliminar esa tabla")){
+        fetch('https://nu3t44r9jf.execute-api.us-east-2.amazonaws.com/prod/deletecol',{
+            method:'DELETE',
+            body: JSON.stringify(params),
+            headers: {'Content-Type':'application/json'},
+            mode: "cors"
+        });
+    }
 
 }
 

@@ -1,6 +1,7 @@
 'use strict'
 
 function agregarToDo() {
+
     var name = sessionStorage.getItem('idTabla');
     var todo = document.getElementById("todo").value;
 
