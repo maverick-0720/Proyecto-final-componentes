@@ -1,6 +1,6 @@
-function traerToDo() {
+var name = sessionStorage.getItem('idTabla');
 
-    var name = sessionStorage.getItem('idTabla');
+function traerToDo() {
 
     var params = {
         name: name
@@ -35,7 +35,7 @@ function traerToDo() {
                 botonAct.addEventListener('click', actualizar);
 
                 let botonEliminar = document.createElement('button');
-                botonEliminar.id = data.body.Items[i];
+                botonEliminar.id = data.body.Items[i].ID;
                 botonEliminar.innerText = "Eliminar To Do";
                 celdaEliminar.appendChild(botonEliminar);
                 botonEliminar.addEventListener('click', eliminar);
@@ -44,18 +44,34 @@ function traerToDo() {
 }
 
 function actualizar() {
-
+    let idTabla = this.id;
+    sessionStorage.setItem('idTabla',idTabla);
+    window.location.href = 'actualizarToDo.html';
 }
 
 function eliminar() {
-    // fetch('https://nu3t44r9jf.execute-api.us-east-2.amazonaws.com/prod/deletedata', {
-    //     method: 'DELETE',
-    //     body: JSON.stringify(params),
-    //     headers: {'Content-Type': 'application/json'},
-    //     mode: "cors"
-    // })
-    //     .then(data => {
-    //         console.log(data.json());
-    //     })
+
+    let id = this.id;
+    sessionStorage.setItem('id',id);
+
+    let params = {
+        name:name,
+        id:parseInt(id)
+    }
+
+    if (confirm("Estás seguro de querer eliminar este ToDo")){
+        fetch('https://nu3t44r9jf.execute-api.us-east-2.amazonaws.com/prod/deletedata', {
+            method: 'DELETE',
+            body: JSON.stringify(params),
+            headers: {'Content-Type': 'application/json'},
+            mode: "cors"
+        })
+            .then(data => {
+                alert("Se ha borrado este ToDo de la colección")
+                console.log(data.json());
+            })
+    }
+
+
 }
 
