@@ -45,19 +45,19 @@ function traerTablas() {
 
 function agregar() {
     let idTabla = this.id;
-    sessionStorage.setItem('idTabla',idTabla);
+    sessionStorage.setItem('nombreTabla',idTabla);
     window.location.href = 'agregarTarea.html';
 }
 
 function verToDos() {
     let idTabla = this.id;
-    sessionStorage.setItem('idTabla',idTabla);
+    sessionStorage.setItem('nombreTabla',idTabla);
     window.location.href = 'verToDo.html';
 }
 
 function eliminarColec() {
     let idTabla = this.id;
-    sessionStorage.setItem('idTabla',idTabla);
+    sessionStorage.setItem('nombreTabla',idTabla);
 
     var params = {
         name: idTabla

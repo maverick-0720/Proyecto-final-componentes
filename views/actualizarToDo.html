@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <title>Actualizar</title>
 </head>
-<body>
+<body onload="traerDatos()">
 <h3>Por favor, efectue el cambio en el cuadro de abajo</h3>
 <br/>
 <textarea id="todo" name="todo" rows="4" cols="50"></textarea>
 <br/>
-<button type="button" onclick="agregarToDo()">Enviar</button>
+<button type="button" id="enviar" onclick="actDatos()">Enviar</button>
 <br/>
 <br/>
 <a href="verColec.html">Volver a las colecciones</a><br/>
 <a href="index.html">Volver al menú</a>
+<script src="../js/actualizarToDo.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-var name = sessionStorage.getItem('idTabla');
+var name = sessionStorage.getItem('nombreTabla');
 
 function traerToDo() {
 
@@ -29,7 +29,7 @@ function traerToDo() {
                 celdaNombre.innerHTML = data.body.Items[i].ToDo;
 
                 let botonAct = document.createElement('button');
-                botonAct.id = data.body.Items[i];
+                botonAct.id = data.body.Items[i].ID;
                 botonAct.innerText = "Actualizar To Do";
                 celdaActualizar.appendChild(botonAct);
                 botonAct.addEventListener('click', actualizar);
@@ -44,15 +44,19 @@ function traerToDo() {
 }
 
 function actualizar() {
-    let idTabla = this.id;
-    sessionStorage.setItem('idTabla',idTabla);
+    let nombreTabla = this.id;
+    sessionStorage.setItem('idTabla',nombreTabla);
+    console.log(nombreTabla);
     window.location.href = 'actualizarToDo.html';
 }
 
 function eliminar() {
 
     let id = this.id;
-    sessionStorage.setItem('id',id);
+    sessionStorage.setItem('idTabla',id);
+
+    console.log(name);
+    console.log(typeof id);
 
     let params = {
         name:name,

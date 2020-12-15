@@ -2,7 +2,7 @@
 
 function agregarToDo() {
 
-    var name = sessionStorage.getItem('idTabla');
+    var name = sessionStorage.getItem('nombreTabla');
     var todo = document.getElementById("todo").value;
 
     if (todo) {
