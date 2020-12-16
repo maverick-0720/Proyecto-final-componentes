@@ -19,6 +19,7 @@ function sendNewTable() {
             .then(data => {
                 if (data) {
                     alert("Se ha creado una nueva tabla");
+                    window.location.href='verColec.html';
                 } else {
                     alert("No se ha podido crear una nueva tabla");
                 }

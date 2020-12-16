@@ -45,6 +45,7 @@ function actDatos() {
         .then(data => {
             if (data) {
                 alert("Se ha hecho la actualización del ToDo")
+                window.location.href='verColec.html';
             }
         })
 }

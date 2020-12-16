@@ -24,7 +24,7 @@ function agregarToDo() {
             .then(data => {
                 if (data) {
                     alert("Se ha agregado un nuevo ToDo a la coleccion");
-                    console.log(data);
+                    window.location.href='verToDo.html'
                 } else {
                     alert("No se ha podido agregar el ToDo");
                 }

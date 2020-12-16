@@ -69,6 +69,8 @@ function eliminarColec() {
             body: JSON.stringify(params),
             headers: {'Content-Type':'application/json'},
             mode: "cors"
+        }).then(() => {
+           window.location.href='index.html';
         });
     }
 

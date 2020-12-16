@@ -46,7 +46,6 @@ function traerToDo() {
 function actualizar() {
     let nombreTabla = this.id;
     sessionStorage.setItem('idTabla',nombreTabla);
-    console.log(nombreTabla);
     window.location.href = 'actualizarToDo.html';
 }
 
@@ -72,7 +71,7 @@ function eliminar() {
         })
             .then(data => {
                 alert("Se ha borrado este ToDo de la colección")
-                console.log(data.json());
+                window.location.href='verColec.html';
             })
     }
 
