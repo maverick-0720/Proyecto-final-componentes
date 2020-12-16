@@ -28,7 +28,6 @@ function sendNewTable() {
     } else {
         alert("Por favor primero llene el espacio en blanco y dele enviar");
     }
-
-
-
 }
+
+

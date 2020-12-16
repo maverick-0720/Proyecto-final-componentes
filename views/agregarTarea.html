@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Agregar Tareas</title>
 </head>
-<body>
+<body onload="verificarUser()">
 <h3>Por favor, registre un To-Do en el area inferior</h3>
 <br/>
 <textarea id="todo" name="todo" rows="4" cols="50"></textarea>
@@ -15,5 +15,6 @@
 <a href="verColec.html">Volver a las colecciones</a><br/>
 <a href="index.html">Volver al menú</a>
 <script src="../js/agregarTarea.js"></script>
+<script src="../js/revisarDato.js"></script>
 </body>
 </html>
