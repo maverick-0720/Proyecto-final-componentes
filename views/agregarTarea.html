@@ -2,18 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
     <title>Agregar Tareas</title>
 </head>
 <body onload="verificarUser()">
-<h3>Por favor, registre un To-Do en el area inferior</h3>
-<br/>
-<textarea id="todo" name="todo" rows="4" cols="50"></textarea>
-<br/>
-<button type="button" onclick="agregarToDo()">Enviar</button>
-<br/>
-<br/>
-<a href="verColec.html">Volver a las colecciones</a><br/>
-<a href="index.html">Volver al menú</a>
+<div class="container h-100">
+    <div class="row justify-content-center h-100">
+        <div class="col-sm-8 align-self-center text-center">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="m-5">Agregar tarea a la tabla</h2>
+                    <div class="form-group">
+                        <textarea id="todo" name="todo" rows="4" cols="50"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="agregarToDo()">Registrar</button><br><br/>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='./verColec.html'">Colecciones</button><br/><br/>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='./index.html'">Index</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="../js/agregarTarea.js"></script>
 <script src="../js/revisarDato.js"></script>
 </body>

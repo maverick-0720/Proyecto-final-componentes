@@ -2,21 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
     <title>Colección Listado</title>
 </head>
 <body onload="verificarUser(),traerTablas()">
-<h2>Listado de colecciones hechas</h2>
-<br/>
-<table id="coleccion">
-    <tr>
-        <th>Nombre</th>
-        <th>Agregar</th>
-        <th>Ver</th>
-        <th>Eliminar colección</th>
-    </tr>
-</table>
-<br/>
-<a href="index.html">Volver al menú</a>
+<div class="container h-100">
+    <div class="row justify-content-center h-100">
+        <div class="col-sm-8 align-self-center text-center">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h1 class="m-5">Listado de colecciones hechas</h1>
+                    <table id="coleccion" style="margin-left: 13%">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Agregar</th>
+                            <th>Ver</th>
+                            <th>Eliminar colección</th>
+                        </tr>
+                    </table><br/><br/>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='./index.html'">Atras</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="../js/verColec.js"></script>
 <script src="../js/revisarDato.js"></script>
 </body>

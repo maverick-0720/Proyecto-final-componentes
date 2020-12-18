@@ -2,18 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
     <title>Colección Registro</title>
 </head>
 <body onload="verificarUser()">
-<h2>Por favor, escriba el nombre de la colección donde guardará sus to do's</h2>
-<br/>
-<form>
-    <label for="coleccion">Nombre de la colección:</label><br/>
-    <input type="text" id="coleccion" name="coleccion"><br/><br/>
-    <button type="button" onclick="sendNewTable()">enviar</button>
-</form>
-<br/>
-<a href="index.html">Volver al menú</a>
+<div class="container h-100">
+    <div class="row justify-content-center h-100">
+        <div class="col-sm-8 align-self-center text-center">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="m-5">Agregar una nueva colección</h2>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="coleccion" placeholder="Nombre de la tabla" name="coleccion">
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="sendNewTable()">Registrar</button><br><br/>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='./index.html'">Atras</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="../js/agregarColec.js"></script>
 <script src="../js/revisarDato.js"></script>
 </body>
